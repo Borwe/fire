@@ -31,8 +31,8 @@ from a struct or changing the function\method signatures, then the main process
 won't need to restart, but only the sub processes that simulate a function and
 method calls will be getting restarted when code changes.
 
-- How do I plan to achieve this auto updating of the function/method processes,
-if the actual user of this project for reloading codebase isn't separating their code
+- How do I plan to achieve this auto hot reloading of the function/method processes
+if the actual user of this project using it for hot reloading their codebase isn't separating their code
 explicitly? Well this project would simply produce an executable, and this executables
 work is to start your `main.go`, on the root with a simple `go run ./main.go`,
 but first, we go through the project, split every project level function and method into it's own
