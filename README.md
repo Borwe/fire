@@ -51,9 +51,9 @@ individual functions, alot of very bad things can happen.
 - But doesn't go have the plugin option when compiling? Yes it does, but the problem with this
 option is a plugin cannot be unloaded once loaded, that means, if a function should change, then
 we might end up loading 100000+ of the same function, which even if we find a way of mangling 
-function names, we still stand the risk of bloating up memory, as alot of dead code would just be sitted
-doing nothing. Ooh yeah one last thing, plugins aren't supported on Windows, atleast at the time of
-this writing.
+function names to avoid collision, we still stand the risk of bloating up memory of the executable,
+as alot of dead code would just be sitted doing nothing. Ooh yeah one last thing,
+plugins aren't supported on Windows, atleast at the time of this writing.
 
 ## Why are you doing this?
 Go is already fast at compiling, but sometimes you don't want to restart your whole app
