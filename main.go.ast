@@ -1,0 +1,606 @@
+     0  *ast.Scope {
+     1  .  Objects: map[string]*ast.Object (len = 5) {
+     2  .  .  "main": *ast.Object {
+     3  .  .  .  Kind: func
+     4  .  .  .  Name: "main"
+     5  .  .  .  Decl: *ast.FuncDecl {
+     6  .  .  .  .  Name: *ast.Ident {
+     7  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:24:6
+     8  .  .  .  .  .  Name: "main"
+     9  .  .  .  .  .  Obj: *(obj @ 2)
+    10  .  .  .  .  }
+    11  .  .  .  .  Type: *ast.FuncType {
+    12  .  .  .  .  .  Func: /home/brian/Workspaces/fire/main.go:24:1
+    13  .  .  .  .  .  Params: *ast.FieldList {
+    14  .  .  .  .  .  .  Opening: /home/brian/Workspaces/fire/main.go:24:10
+    15  .  .  .  .  .  .  Closing: /home/brian/Workspaces/fire/main.go:24:11
+    16  .  .  .  .  .  }
+    17  .  .  .  .  }
+    18  .  .  .  .  Body: *ast.BlockStmt {
+    19  .  .  .  .  .  Lbrace: /home/brian/Workspaces/fire/main.go:24:12
+    20  .  .  .  .  .  List: []ast.Stmt (len = 7) {
+    21  .  .  .  .  .  .  0: *ast.AssignStmt {
+    22  .  .  .  .  .  .  .  Lhs: []ast.Expr (len = 2) {
+    23  .  .  .  .  .  .  .  .  0: *ast.Ident {
+    24  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:25:2
+    25  .  .  .  .  .  .  .  .  .  Name: "dir"
+    26  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+    27  .  .  .  .  .  .  .  .  .  .  Kind: var
+    28  .  .  .  .  .  .  .  .  .  .  Name: "dir"
+    29  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 21)
+    30  .  .  .  .  .  .  .  .  .  }
+    31  .  .  .  .  .  .  .  .  }
+    32  .  .  .  .  .  .  .  .  1: *ast.Ident {
+    33  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:25:7
+    34  .  .  .  .  .  .  .  .  .  Name: "err"
+    35  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+    36  .  .  .  .  .  .  .  .  .  .  Kind: var
+    37  .  .  .  .  .  .  .  .  .  .  Name: "err"
+    38  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 21)
+    39  .  .  .  .  .  .  .  .  .  }
+    40  .  .  .  .  .  .  .  .  }
+    41  .  .  .  .  .  .  .  }
+    42  .  .  .  .  .  .  .  TokPos: /home/brian/Workspaces/fire/main.go:25:11
+    43  .  .  .  .  .  .  .  Tok: :=
+    44  .  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+    45  .  .  .  .  .  .  .  .  0: *ast.CallExpr {
+    46  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+    47  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+    48  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:25:14
+    49  .  .  .  .  .  .  .  .  .  .  .  Name: "os"
+    50  .  .  .  .  .  .  .  .  .  .  }
+    51  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+    52  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:25:17
+    53  .  .  .  .  .  .  .  .  .  .  .  Name: "Getwd"
+    54  .  .  .  .  .  .  .  .  .  .  }
+    55  .  .  .  .  .  .  .  .  .  }
+    56  .  .  .  .  .  .  .  .  .  Lparen: /home/brian/Workspaces/fire/main.go:25:22
+    57  .  .  .  .  .  .  .  .  .  Ellipsis: -
+    58  .  .  .  .  .  .  .  .  .  Rparen: /home/brian/Workspaces/fire/main.go:25:23
+    59  .  .  .  .  .  .  .  .  }
+    60  .  .  .  .  .  .  .  }
+    61  .  .  .  .  .  .  }
+    62  .  .  .  .  .  .  1: *ast.IfStmt {
+    63  .  .  .  .  .  .  .  If: /home/brian/Workspaces/fire/main.go:26:2
+    64  .  .  .  .  .  .  .  Cond: *ast.BinaryExpr {
+    65  .  .  .  .  .  .  .  .  X: *ast.Ident {
+    66  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:26:5
+    67  .  .  .  .  .  .  .  .  .  Name: "err"
+    68  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 35)
+    69  .  .  .  .  .  .  .  .  }
+    70  .  .  .  .  .  .  .  .  OpPos: /home/brian/Workspaces/fire/main.go:26:8
+    71  .  .  .  .  .  .  .  .  Op: !=
+    72  .  .  .  .  .  .  .  .  Y: *ast.Ident {
+    73  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:26:10
+    74  .  .  .  .  .  .  .  .  .  Name: "nil"
+    75  .  .  .  .  .  .  .  .  }
+    76  .  .  .  .  .  .  .  }
+    77  .  .  .  .  .  .  .  Body: *ast.BlockStmt {
+    78  .  .  .  .  .  .  .  .  Lbrace: /home/brian/Workspaces/fire/main.go:26:14
+    79  .  .  .  .  .  .  .  .  List: []ast.Stmt (len = 1) {
+    80  .  .  .  .  .  .  .  .  .  0: *ast.ExprStmt {
+    81  .  .  .  .  .  .  .  .  .  .  X: *ast.CallExpr {
+    82  .  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+    83  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+    84  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:27:3
+    85  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "log"
+    86  .  .  .  .  .  .  .  .  .  .  .  .  }
+    87  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+    88  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:27:7
+    89  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Fatalln"
+    90  .  .  .  .  .  .  .  .  .  .  .  .  }
+    91  .  .  .  .  .  .  .  .  .  .  .  }
+    92  .  .  .  .  .  .  .  .  .  .  .  Lparen: /home/brian/Workspaces/fire/main.go:27:14
+    93  .  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+    94  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+    95  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:27:15
+    96  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "err"
+    97  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 35)
+    98  .  .  .  .  .  .  .  .  .  .  .  .  }
+    99  .  .  .  .  .  .  .  .  .  .  .  }
+   100  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   101  .  .  .  .  .  .  .  .  .  .  .  Rparen: /home/brian/Workspaces/fire/main.go:27:18
+   102  .  .  .  .  .  .  .  .  .  .  }
+   103  .  .  .  .  .  .  .  .  .  }
+   104  .  .  .  .  .  .  .  .  }
+   105  .  .  .  .  .  .  .  .  Rbrace: /home/brian/Workspaces/fire/main.go:28:2
+   106  .  .  .  .  .  .  .  }
+   107  .  .  .  .  .  .  }
+   108  .  .  .  .  .  .  2: *ast.AssignStmt {
+   109  .  .  .  .  .  .  .  Lhs: []ast.Expr (len = 1) {
+   110  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   111  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:29:2
+   112  .  .  .  .  .  .  .  .  .  Name: "fset"
+   113  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   114  .  .  .  .  .  .  .  .  .  .  Kind: var
+   115  .  .  .  .  .  .  .  .  .  .  Name: "fset"
+   116  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 108)
+   117  .  .  .  .  .  .  .  .  .  }
+   118  .  .  .  .  .  .  .  .  }
+   119  .  .  .  .  .  .  .  }
+   120  .  .  .  .  .  .  .  TokPos: /home/brian/Workspaces/fire/main.go:29:7
+   121  .  .  .  .  .  .  .  Tok: :=
+   122  .  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+   123  .  .  .  .  .  .  .  .  0: *ast.CallExpr {
+   124  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   125  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   126  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:29:10
+   127  .  .  .  .  .  .  .  .  .  .  .  Name: "token"
+   128  .  .  .  .  .  .  .  .  .  .  }
+   129  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   130  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:29:16
+   131  .  .  .  .  .  .  .  .  .  .  .  Name: "NewFileSet"
+   132  .  .  .  .  .  .  .  .  .  .  }
+   133  .  .  .  .  .  .  .  .  .  }
+   134  .  .  .  .  .  .  .  .  .  Lparen: /home/brian/Workspaces/fire/main.go:29:26
+   135  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   136  .  .  .  .  .  .  .  .  .  Rparen: /home/brian/Workspaces/fire/main.go:29:27
+   137  .  .  .  .  .  .  .  .  }
+   138  .  .  .  .  .  .  .  }
+   139  .  .  .  .  .  .  }
+   140  .  .  .  .  .  .  3: *ast.AssignStmt {
+   141  .  .  .  .  .  .  .  Lhs: []ast.Expr (len = 2) {
+   142  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   143  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:30:2
+   144  .  .  .  .  .  .  .  .  .  Name: "pkgs"
+   145  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   146  .  .  .  .  .  .  .  .  .  .  Kind: var
+   147  .  .  .  .  .  .  .  .  .  .  Name: "pkgs"
+   148  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 140)
+   149  .  .  .  .  .  .  .  .  .  }
+   150  .  .  .  .  .  .  .  .  }
+   151  .  .  .  .  .  .  .  .  1: *ast.Ident {
+   152  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:30:8
+   153  .  .  .  .  .  .  .  .  .  Name: "err"
+   154  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 35)
+   155  .  .  .  .  .  .  .  .  }
+   156  .  .  .  .  .  .  .  }
+   157  .  .  .  .  .  .  .  TokPos: /home/brian/Workspaces/fire/main.go:30:12
+   158  .  .  .  .  .  .  .  Tok: :=
+   159  .  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+   160  .  .  .  .  .  .  .  .  0: *ast.CallExpr {
+   161  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   162  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   163  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:30:15
+   164  .  .  .  .  .  .  .  .  .  .  .  Name: "parser"
+   165  .  .  .  .  .  .  .  .  .  .  }
+   166  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   167  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:30:22
+   168  .  .  .  .  .  .  .  .  .  .  .  Name: "ParseDir"
+   169  .  .  .  .  .  .  .  .  .  .  }
+   170  .  .  .  .  .  .  .  .  .  }
+   171  .  .  .  .  .  .  .  .  .  Lparen: /home/brian/Workspaces/fire/main.go:30:30
+   172  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 4) {
+   173  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   174  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:30:31
+   175  .  .  .  .  .  .  .  .  .  .  .  Name: "fset"
+   176  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 113)
+   177  .  .  .  .  .  .  .  .  .  .  }
+   178  .  .  .  .  .  .  .  .  .  .  1: *ast.Ident {
+   179  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:30:37
+   180  .  .  .  .  .  .  .  .  .  .  .  Name: "dir"
+   181  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 26)
+   182  .  .  .  .  .  .  .  .  .  .  }
+   183  .  .  .  .  .  .  .  .  .  .  2: *ast.Ident {
+   184  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:30:41
+   185  .  .  .  .  .  .  .  .  .  .  .  Name: "nil"
+   186  .  .  .  .  .  .  .  .  .  .  }
+   187  .  .  .  .  .  .  .  .  .  .  3: *ast.SelectorExpr {
+   188  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   189  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:30:46
+   190  .  .  .  .  .  .  .  .  .  .  .  .  Name: "parser"
+   191  .  .  .  .  .  .  .  .  .  .  .  }
+   192  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   193  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:30:53
+   194  .  .  .  .  .  .  .  .  .  .  .  .  Name: "SpuriousErrors"
+   195  .  .  .  .  .  .  .  .  .  .  .  }
+   196  .  .  .  .  .  .  .  .  .  .  }
+   197  .  .  .  .  .  .  .  .  .  }
+   198  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   199  .  .  .  .  .  .  .  .  .  Rparen: /home/brian/Workspaces/fire/main.go:30:67
+   200  .  .  .  .  .  .  .  .  }
+   201  .  .  .  .  .  .  .  }
+   202  .  .  .  .  .  .  }
+   203  .  .  .  .  .  .  4: *ast.IfStmt {
+   204  .  .  .  .  .  .  .  If: /home/brian/Workspaces/fire/main.go:31:2
+   205  .  .  .  .  .  .  .  Cond: *ast.BinaryExpr {
+   206  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   207  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:31:5
+   208  .  .  .  .  .  .  .  .  .  Name: "err"
+   209  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 35)
+   210  .  .  .  .  .  .  .  .  }
+   211  .  .  .  .  .  .  .  .  OpPos: /home/brian/Workspaces/fire/main.go:31:9
+   212  .  .  .  .  .  .  .  .  Op: !=
+   213  .  .  .  .  .  .  .  .  Y: *ast.Ident {
+   214  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:31:12
+   215  .  .  .  .  .  .  .  .  .  Name: "nil"
+   216  .  .  .  .  .  .  .  .  }
+   217  .  .  .  .  .  .  .  }
+   218  .  .  .  .  .  .  .  Body: *ast.BlockStmt {
+   219  .  .  .  .  .  .  .  .  Lbrace: /home/brian/Workspaces/fire/main.go:31:15
+   220  .  .  .  .  .  .  .  .  List: []ast.Stmt (len = 1) {
+   221  .  .  .  .  .  .  .  .  .  0: *ast.ExprStmt {
+   222  .  .  .  .  .  .  .  .  .  .  X: *ast.CallExpr {
+   223  .  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   224  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   225  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:32:3
+   226  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "log"
+   227  .  .  .  .  .  .  .  .  .  .  .  .  }
+   228  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   229  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:32:7
+   230  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Fatalf"
+   231  .  .  .  .  .  .  .  .  .  .  .  .  }
+   232  .  .  .  .  .  .  .  .  .  .  .  }
+   233  .  .  .  .  .  .  .  .  .  .  .  Lparen: /home/brian/Workspaces/fire/main.go:32:13
+   234  .  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 2) {
+   235  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+   236  .  .  .  .  .  .  .  .  .  .  .  .  .  ValuePos: /home/brian/Workspaces/fire/main.go:32:14
+   237  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   238  .  .  .  .  .  .  .  .  .  .  .  .  .  Value: "\"Failed to parse with error: %s\\n\""
+   239  .  .  .  .  .  .  .  .  .  .  .  .  }
+   240  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.Ident {
+   241  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:32:49
+   242  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "err"
+   243  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 35)
+   244  .  .  .  .  .  .  .  .  .  .  .  .  }
+   245  .  .  .  .  .  .  .  .  .  .  .  }
+   246  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   247  .  .  .  .  .  .  .  .  .  .  .  Rparen: /home/brian/Workspaces/fire/main.go:32:52
+   248  .  .  .  .  .  .  .  .  .  .  }
+   249  .  .  .  .  .  .  .  .  .  }
+   250  .  .  .  .  .  .  .  .  }
+   251  .  .  .  .  .  .  .  .  Rbrace: /home/brian/Workspaces/fire/main.go:33:2
+   252  .  .  .  .  .  .  .  }
+   253  .  .  .  .  .  .  }
+   254  .  .  .  .  .  .  5: *ast.RangeStmt {
+   255  .  .  .  .  .  .  .  For: /home/brian/Workspaces/fire/main.go:35:2
+   256  .  .  .  .  .  .  .  Key: *ast.Ident {
+   257  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:35:6
+   258  .  .  .  .  .  .  .  .  Name: "_"
+   259  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   260  .  .  .  .  .  .  .  .  .  Kind: var
+   261  .  .  .  .  .  .  .  .  .  Name: "_"
+   262  .  .  .  .  .  .  .  .  .  Decl: *ast.AssignStmt {
+   263  .  .  .  .  .  .  .  .  .  .  Lhs: []ast.Expr (len = 2) {
+   264  .  .  .  .  .  .  .  .  .  .  .  0: *(obj @ 256)
+   265  .  .  .  .  .  .  .  .  .  .  .  1: *ast.Ident {
+   266  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:35:9
+   267  .  .  .  .  .  .  .  .  .  .  .  .  Name: "pkg"
+   268  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   269  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   270  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "pkg"
+   271  .  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 262)
+   272  .  .  .  .  .  .  .  .  .  .  .  .  }
+   273  .  .  .  .  .  .  .  .  .  .  .  }
+   274  .  .  .  .  .  .  .  .  .  .  }
+   275  .  .  .  .  .  .  .  .  .  .  TokPos: /home/brian/Workspaces/fire/main.go:35:13
+   276  .  .  .  .  .  .  .  .  .  .  Tok: :=
+   277  .  .  .  .  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+   278  .  .  .  .  .  .  .  .  .  .  .  0: *ast.UnaryExpr {
+   279  .  .  .  .  .  .  .  .  .  .  .  .  OpPos: -
+   280  .  .  .  .  .  .  .  .  .  .  .  .  Op: range
+   281  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   282  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:35:22
+   283  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "pkgs"
+   284  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 145)
+   285  .  .  .  .  .  .  .  .  .  .  .  .  }
+   286  .  .  .  .  .  .  .  .  .  .  .  }
+   287  .  .  .  .  .  .  .  .  .  .  }
+   288  .  .  .  .  .  .  .  .  .  }
+   289  .  .  .  .  .  .  .  .  }
+   290  .  .  .  .  .  .  .  }
+   291  .  .  .  .  .  .  .  Value: *(obj @ 265)
+   292  .  .  .  .  .  .  .  TokPos: /home/brian/Workspaces/fire/main.go:35:13
+   293  .  .  .  .  .  .  .  Tok: :=
+   294  .  .  .  .  .  .  .  Range: /home/brian/Workspaces/fire/main.go:35:16
+   295  .  .  .  .  .  .  .  X: *(obj @ 281)
+   296  .  .  .  .  .  .  .  Body: *ast.BlockStmt {
+   297  .  .  .  .  .  .  .  .  Lbrace: /home/brian/Workspaces/fire/main.go:35:27
+   298  .  .  .  .  .  .  .  .  List: []ast.Stmt (len = 1) {
+   299  .  .  .  .  .  .  .  .  .  0: *ast.RangeStmt {
+   300  .  .  .  .  .  .  .  .  .  .  For: /home/brian/Workspaces/fire/main.go:36:3
+   301  .  .  .  .  .  .  .  .  .  .  Key: *ast.Ident {
+   302  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:36:7
+   303  .  .  .  .  .  .  .  .  .  .  .  Name: "_"
+   304  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   305  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   306  .  .  .  .  .  .  .  .  .  .  .  .  Name: "_"
+   307  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *ast.AssignStmt {
+   308  .  .  .  .  .  .  .  .  .  .  .  .  .  Lhs: []ast.Expr (len = 2) {
+   309  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *(obj @ 301)
+   310  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.Ident {
+   311  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:36:10
+   312  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "file"
+   313  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   314  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   315  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "file"
+   316  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 307)
+   317  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   318  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   319  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   320  .  .  .  .  .  .  .  .  .  .  .  .  .  TokPos: /home/brian/Workspaces/fire/main.go:36:15
+   321  .  .  .  .  .  .  .  .  .  .  .  .  .  Tok: :=
+   322  .  .  .  .  .  .  .  .  .  .  .  .  .  Rhs: []ast.Expr (len = 1) {
+   323  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.UnaryExpr {
+   324  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  OpPos: -
+   325  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Op: range
+   326  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.SelectorExpr {
+   327  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   328  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:36:24
+   329  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "pkg"
+   330  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 268)
+   331  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   332  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   333  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:36:28
+   334  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Files"
+   335  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   336  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   337  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   338  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   339  .  .  .  .  .  .  .  .  .  .  .  .  }
+   340  .  .  .  .  .  .  .  .  .  .  .  }
+   341  .  .  .  .  .  .  .  .  .  .  }
+   342  .  .  .  .  .  .  .  .  .  .  Value: *(obj @ 310)
+   343  .  .  .  .  .  .  .  .  .  .  TokPos: /home/brian/Workspaces/fire/main.go:36:15
+   344  .  .  .  .  .  .  .  .  .  .  Tok: :=
+   345  .  .  .  .  .  .  .  .  .  .  Range: /home/brian/Workspaces/fire/main.go:36:18
+   346  .  .  .  .  .  .  .  .  .  .  X: *(obj @ 326)
+   347  .  .  .  .  .  .  .  .  .  .  Body: *ast.BlockStmt {
+   348  .  .  .  .  .  .  .  .  .  .  .  Lbrace: /home/brian/Workspaces/fire/main.go:36:33
+   349  .  .  .  .  .  .  .  .  .  .  .  List: []ast.Stmt (len = 1) {
+   350  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.ExprStmt {
+   351  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.CallExpr {
+   352  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   353  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   354  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:37:4
+   355  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "ast"
+   356  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   357  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   358  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:37:8
+   359  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Print"
+   360  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   361  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   362  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Lparen: /home/brian/Workspaces/fire/main.go:37:13
+   363  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 2) {
+   364  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   365  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:37:14
+   366  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "fset"
+   367  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 113)
+   368  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   369  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  1: *ast.SelectorExpr {
+   370  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   371  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:37:19
+   372  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "file"
+   373  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 313)
+   374  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   375  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   376  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:37:24
+   377  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Name: "Scope"
+   378  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   379  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   380  .  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   381  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Ellipsis: -
+   382  .  .  .  .  .  .  .  .  .  .  .  .  .  .  Rparen: /home/brian/Workspaces/fire/main.go:37:29
+   383  .  .  .  .  .  .  .  .  .  .  .  .  .  }
+   384  .  .  .  .  .  .  .  .  .  .  .  .  }
+   385  .  .  .  .  .  .  .  .  .  .  .  }
+   386  .  .  .  .  .  .  .  .  .  .  .  Rbrace: /home/brian/Workspaces/fire/main.go:38:3
+   387  .  .  .  .  .  .  .  .  .  .  }
+   388  .  .  .  .  .  .  .  .  .  }
+   389  .  .  .  .  .  .  .  .  }
+   390  .  .  .  .  .  .  .  .  Rbrace: /home/brian/Workspaces/fire/main.go:39:2
+   391  .  .  .  .  .  .  .  }
+   392  .  .  .  .  .  .  }
+   393  .  .  .  .  .  .  6: *ast.ExprStmt {
+   394  .  .  .  .  .  .  .  X: *ast.CallExpr {
+   395  .  .  .  .  .  .  .  .  Fun: *ast.SelectorExpr {
+   396  .  .  .  .  .  .  .  .  .  X: *ast.Ident {
+   397  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:40:2
+   398  .  .  .  .  .  .  .  .  .  .  Name: "fmt"
+   399  .  .  .  .  .  .  .  .  .  }
+   400  .  .  .  .  .  .  .  .  .  Sel: *ast.Ident {
+   401  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:40:6
+   402  .  .  .  .  .  .  .  .  .  .  Name: "Println"
+   403  .  .  .  .  .  .  .  .  .  }
+   404  .  .  .  .  .  .  .  .  }
+   405  .  .  .  .  .  .  .  .  Lparen: /home/brian/Workspaces/fire/main.go:40:13
+   406  .  .  .  .  .  .  .  .  Args: []ast.Expr (len = 1) {
+   407  .  .  .  .  .  .  .  .  .  0: *ast.BasicLit {
+   408  .  .  .  .  .  .  .  .  .  .  ValuePos: /home/brian/Workspaces/fire/main.go:40:14
+   409  .  .  .  .  .  .  .  .  .  .  Kind: STRING
+   410  .  .  .  .  .  .  .  .  .  .  Value: "\"\\n\\n🔥FIRE, yet another hot reloader🔥\""
+   411  .  .  .  .  .  .  .  .  .  }
+   412  .  .  .  .  .  .  .  .  }
+   413  .  .  .  .  .  .  .  .  Ellipsis: -
+   414  .  .  .  .  .  .  .  .  Rparen: /home/brian/Workspaces/fire/main.go:40:58
+   415  .  .  .  .  .  .  .  }
+   416  .  .  .  .  .  .  }
+   417  .  .  .  .  .  }
+   418  .  .  .  .  .  Rbrace: /home/brian/Workspaces/fire/main.go:41:1
+   419  .  .  .  .  }
+   420  .  .  .  }
+   421  .  .  }
+   422  .  .  "Wembe": *ast.Object {
+   423  .  .  .  Kind: type
+   424  .  .  .  Name: "Wembe"
+   425  .  .  .  Decl: *ast.TypeSpec {
+   426  .  .  .  .  Name: *ast.Ident {
+   427  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:13:6
+   428  .  .  .  .  .  Name: "Wembe"
+   429  .  .  .  .  .  Obj: *(obj @ 422)
+   430  .  .  .  .  }
+   431  .  .  .  .  Assign: -
+   432  .  .  .  .  Type: *ast.StructType {
+   433  .  .  .  .  .  Struct: /home/brian/Workspaces/fire/main.go:13:12
+   434  .  .  .  .  .  Fields: *ast.FieldList {
+   435  .  .  .  .  .  .  Opening: /home/brian/Workspaces/fire/main.go:13:19
+   436  .  .  .  .  .  .  List: []*ast.Field (len = 2) {
+   437  .  .  .  .  .  .  .  0: *ast.Field {
+   438  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   439  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   440  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:14:2
+   441  .  .  .  .  .  .  .  .  .  .  Name: "l1"
+   442  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   443  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   444  .  .  .  .  .  .  .  .  .  .  .  Name: "l1"
+   445  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 437)
+   446  .  .  .  .  .  .  .  .  .  .  }
+   447  .  .  .  .  .  .  .  .  .  }
+   448  .  .  .  .  .  .  .  .  }
+   449  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   450  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:14:5
+   451  .  .  .  .  .  .  .  .  .  Name: "string"
+   452  .  .  .  .  .  .  .  .  }
+   453  .  .  .  .  .  .  .  }
+   454  .  .  .  .  .  .  .  1: *ast.Field {
+   455  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   456  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   457  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:15:2
+   458  .  .  .  .  .  .  .  .  .  .  Name: "l2"
+   459  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   460  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   461  .  .  .  .  .  .  .  .  .  .  .  Name: "l2"
+   462  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 454)
+   463  .  .  .  .  .  .  .  .  .  .  }
+   464  .  .  .  .  .  .  .  .  .  }
+   465  .  .  .  .  .  .  .  .  }
+   466  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   467  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:15:5
+   468  .  .  .  .  .  .  .  .  .  Name: "int64"
+   469  .  .  .  .  .  .  .  .  }
+   470  .  .  .  .  .  .  .  }
+   471  .  .  .  .  .  .  }
+   472  .  .  .  .  .  .  Closing: /home/brian/Workspaces/fire/main.go:16:1
+   473  .  .  .  .  .  }
+   474  .  .  .  .  .  Incomplete: false
+   475  .  .  .  .  }
+   476  .  .  .  }
+   477  .  .  }
+   478  .  .  "trollll": *ast.Object {
+   479  .  .  .  Kind: func
+   480  .  .  .  Name: "trollll"
+   481  .  .  .  Decl: *ast.FuncDecl {
+   482  .  .  .  .  Name: *ast.Ident {
+   483  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:18:6
+   484  .  .  .  .  .  Name: "trollll"
+   485  .  .  .  .  .  Obj: *(obj @ 478)
+   486  .  .  .  .  }
+   487  .  .  .  .  Type: *ast.FuncType {
+   488  .  .  .  .  .  Func: /home/brian/Workspaces/fire/main.go:18:1
+   489  .  .  .  .  .  Params: *ast.FieldList {
+   490  .  .  .  .  .  .  Opening: /home/brian/Workspaces/fire/main.go:18:13
+   491  .  .  .  .  .  .  Closing: /home/brian/Workspaces/fire/main.go:18:14
+   492  .  .  .  .  .  }
+   493  .  .  .  .  }
+   494  .  .  .  .  Body: *ast.BlockStmt {
+   495  .  .  .  .  .  Lbrace: /home/brian/Workspaces/fire/main.go:18:15
+   496  .  .  .  .  .  Rbrace: /home/brian/Workspaces/fire/main.go:18:16
+   497  .  .  .  .  }
+   498  .  .  .  }
+   499  .  .  }
+   500  .  .  "yoyo": *ast.Object {
+   501  .  .  .  Kind: func
+   502  .  .  .  Name: "yoyo"
+   503  .  .  .  Decl: *ast.FuncDecl {
+   504  .  .  .  .  Name: *ast.Ident {
+   505  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:20:6
+   506  .  .  .  .  .  Name: "yoyo"
+   507  .  .  .  .  .  Obj: *(obj @ 500)
+   508  .  .  .  .  }
+   509  .  .  .  .  Type: *ast.FuncType {
+   510  .  .  .  .  .  Func: /home/brian/Workspaces/fire/main.go:20:1
+   511  .  .  .  .  .  Params: *ast.FieldList {
+   512  .  .  .  .  .  .  Opening: /home/brian/Workspaces/fire/main.go:20:10
+   513  .  .  .  .  .  .  List: []*ast.Field (len = 1) {
+   514  .  .  .  .  .  .  .  0: *ast.Field {
+   515  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   516  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   517  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:20:11
+   518  .  .  .  .  .  .  .  .  .  .  Name: "x"
+   519  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   520  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   521  .  .  .  .  .  .  .  .  .  .  .  Name: "x"
+   522  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 514)
+   523  .  .  .  .  .  .  .  .  .  .  }
+   524  .  .  .  .  .  .  .  .  .  }
+   525  .  .  .  .  .  .  .  .  }
+   526  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   527  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:20:13
+   528  .  .  .  .  .  .  .  .  .  Name: "Wembe"
+   529  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 422)
+   530  .  .  .  .  .  .  .  .  }
+   531  .  .  .  .  .  .  .  }
+   532  .  .  .  .  .  .  }
+   533  .  .  .  .  .  .  Closing: /home/brian/Workspaces/fire/main.go:20:18
+   534  .  .  .  .  .  }
+   535  .  .  .  .  }
+   536  .  .  .  .  Body: *ast.BlockStmt {
+   537  .  .  .  .  .  Lbrace: /home/brian/Workspaces/fire/main.go:20:19
+   538  .  .  .  .  .  Rbrace: /home/brian/Workspaces/fire/main.go:20:20
+   539  .  .  .  .  }
+   540  .  .  .  }
+   541  .  .  }
+   542  .  .  "yoyo4": *ast.Object {
+   543  .  .  .  Kind: func
+   544  .  .  .  Name: "yoyo4"
+   545  .  .  .  Decl: *ast.FuncDecl {
+   546  .  .  .  .  Name: *ast.Ident {
+   547  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:22:6
+   548  .  .  .  .  .  Name: "yoyo4"
+   549  .  .  .  .  .  Obj: *(obj @ 542)
+   550  .  .  .  .  }
+   551  .  .  .  .  Type: *ast.FuncType {
+   552  .  .  .  .  .  Func: /home/brian/Workspaces/fire/main.go:22:1
+   553  .  .  .  .  .  Params: *ast.FieldList {
+   554  .  .  .  .  .  .  Opening: /home/brian/Workspaces/fire/main.go:22:11
+   555  .  .  .  .  .  .  List: []*ast.Field (len = 2) {
+   556  .  .  .  .  .  .  .  0: *ast.Field {
+   557  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   558  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   559  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:22:12
+   560  .  .  .  .  .  .  .  .  .  .  Name: "x"
+   561  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   562  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   563  .  .  .  .  .  .  .  .  .  .  .  Name: "x"
+   564  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 556)
+   565  .  .  .  .  .  .  .  .  .  .  }
+   566  .  .  .  .  .  .  .  .  .  }
+   567  .  .  .  .  .  .  .  .  }
+   568  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   569  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:22:14
+   570  .  .  .  .  .  .  .  .  .  Name: "Wembe"
+   571  .  .  .  .  .  .  .  .  .  Obj: *(obj @ 422)
+   572  .  .  .  .  .  .  .  .  }
+   573  .  .  .  .  .  .  .  }
+   574  .  .  .  .  .  .  .  1: *ast.Field {
+   575  .  .  .  .  .  .  .  .  Names: []*ast.Ident (len = 1) {
+   576  .  .  .  .  .  .  .  .  .  0: *ast.Ident {
+   577  .  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:22:21
+   578  .  .  .  .  .  .  .  .  .  .  Name: "y"
+   579  .  .  .  .  .  .  .  .  .  .  Obj: *ast.Object {
+   580  .  .  .  .  .  .  .  .  .  .  .  Kind: var
+   581  .  .  .  .  .  .  .  .  .  .  .  Name: "y"
+   582  .  .  .  .  .  .  .  .  .  .  .  Decl: *(obj @ 574)
+   583  .  .  .  .  .  .  .  .  .  .  }
+   584  .  .  .  .  .  .  .  .  .  }
+   585  .  .  .  .  .  .  .  .  }
+   586  .  .  .  .  .  .  .  .  Type: *ast.Ident {
+   587  .  .  .  .  .  .  .  .  .  NamePos: /home/brian/Workspaces/fire/main.go:22:23
+   588  .  .  .  .  .  .  .  .  .  Name: "float64"
+   589  .  .  .  .  .  .  .  .  }
+   590  .  .  .  .  .  .  .  }
+   591  .  .  .  .  .  .  }
+   592  .  .  .  .  .  .  Closing: /home/brian/Workspaces/fire/main.go:22:30
+   593  .  .  .  .  .  }
+   594  .  .  .  .  }
+   595  .  .  .  .  Body: *ast.BlockStmt {
+   596  .  .  .  .  .  Lbrace: /home/brian/Workspaces/fire/main.go:22:31
+   597  .  .  .  .  .  Rbrace: /home/brian/Workspaces/fire/main.go:22:32
+   598  .  .  .  .  }
+   599  .  .  .  }
+   600  .  .  }
+   601  .  }
+   602  }
+
+
+🔥FIRE, yet another hot reloader🔥
