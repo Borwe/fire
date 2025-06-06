@@ -46,7 +46,7 @@ func TestGettingAstFromValidGoFileAndTurningBackToFile(t *testing.T) {
 	}
 	assert.NotNil(t, thisFileAst)
 
-	//read file
+	//read this file
 	fileData, err := os.ReadFile(file)
 	assert.Nil(t, err)
 	//turn ast to file
@@ -62,6 +62,13 @@ func TestGettingAstFromValidGoFileAndTurningBackToFile(t *testing.T) {
 
 	//check that the two asts match
 	assert.True(t, compareAstsIfMatch(origFileDataAst, newDataAst))
+
+	//read valid.go in this package and test that ast doesn't match
+	notSamefile, err :=os.ReadFile(dir+"valid.go")
+	assert.Nil(t, err)
+	notSameFileAst, err := parser.ParseFile(fileSet, "not.go", notSamefile, parser.SpuriousErrors)
+	assert.Nil(t, err)
+	assert.False(t, compareAstsIfMatch(newDataAst, notSameFileAst))
 }
 
 func compareAstsIfMatch(a *ast.File, b *ast.File) bool {
@@ -91,8 +98,11 @@ func compareAstsIfMatch(a *ast.File, b *ast.File) bool {
 
 		fmt.Println("GET")
 
-		if n1 == nil || n2 == nil &&
-			(reflect.TypeOf(n1) != reflect.TypeOf(n2)) {
+		//we don't deep check if the ast.Node interface actually holds
+		//a nil value, because ast.Inspect returns nil value nodes for the end
+		//of a leaf, then we go and check their types
+		if n1 == nil || n2 == nil ||
+			(reflect.TypeOf(*n1) != reflect.TypeOf(*n2)) {
 			fmt.Println("FAILED ON NIL OR NOT SAME TYPE",n1,"\n\nAND:",n2)
 			continueChannel1<- false
 			continueChannel2<- false
@@ -100,6 +110,7 @@ func compareAstsIfMatch(a *ast.File, b *ast.File) bool {
 			close(continueChannel2)
 			return false
 		}else{
+			fmt.Println(reflect.TypeOf(*n1), reflect.TypeOf(*n2))
 			continueChannel1<- true
 			continueChannel2<- true
 		}
