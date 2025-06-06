@@ -6,28 +6,27 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 )
 
-type Program struct {}
+type Program struct{}
 
-func initProgram()*Program{
+func initProgram() *Program {
 	return &Program{}
 }
 
-func (p Program) Init() tea.Cmd{
+func (p Program) Init() tea.Cmd {
 	return nil
 }
 
-func (p Program) Update(msg tea.Msg) (tea.Model, tea.Cmd){
+func (p Program) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	return p, nil
 }
 
-
-func (p Program) View() string{
+func (p Program) View() string {
 	return "YO"
 }
 
-func main(){
+func main() {
 	prg := tea.NewProgram(initProgram())
-	if _, err := prg.Run(); err!=nil {
-		log.Fatalln("Error after run: ",err)
+	if _, err := prg.Run(); err != nil {
+		log.Fatalln("Error after run: ", err)
 	}
 }

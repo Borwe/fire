@@ -1,0 +1,39 @@
+package parsing
+
+import (
+	"go/ast"
+	"go/printer"
+	"go/token"
+	"strings"
+
+	"golang.org/x/tools/go/packages"
+)
+
+func ParsePackage(dir string, fSet *token.FileSet) (fileAsts []*ast.File, errs[]packages.Error, err error){
+	cfg := packages.Config{
+		Mode: packages.NeedSyntax |
+          packages.NeedDeps |
+          packages.NeedImports |
+          packages.NeedName |
+          packages.NeedCompiledGoFiles |
+          packages.NeedFiles,
+		Fset: fSet,
+		Tests: true,
+	}
+
+	pkgs, err := packages.Load(&cfg,dir)
+	if err==nil {
+		for _, pkg := range pkgs {
+			fileAsts = append(fileAsts,pkg.Syntax...)
+			errs = append(errs, pkg.Errors...)
+		}
+	}
+
+	return fileAsts, errs, err
+}
+
+func ToBytes(astF *ast.File, fSet *token.FileSet) (result string, err error){
+	var str strings.Builder
+	err = printer.Fprint(&str, fSet, astF)
+	return str.String(), err
+}
