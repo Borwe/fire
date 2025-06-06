@@ -9,6 +9,23 @@ import (
 	"golang.org/x/tools/go/packages"
 )
 
+func GetFunctions[Node ast.Node](node Node) []ast.FuncDecl{
+	funcs := []ast.FuncDecl{}
+	ast.Inspect(node, func(n ast.Node) bool {
+		if n != nil {
+			if fn, ok := n.(*ast.FuncDecl); ok {
+				funcs = append(funcs, *fn)
+			}
+		}
+		return true
+	})
+	return funcs
+}
+
+func GetFileName[Node ast.Node](fset *token.FileSet, file Node) string {
+	return fset.Position(file.Pos()).Filename
+}
+
 func ParsePackage(dir string, fSet *token.FileSet) (fileAsts []*ast.File, errs[]packages.Error, err error){
 	cfg := packages.Config{
 		Mode: packages.NeedSyntax |
